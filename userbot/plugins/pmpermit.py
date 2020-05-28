@@ -12,8 +12,8 @@ CACHE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet nibba, check pinned message in** @XtraTgBot"
-USER_BOT_WARN_ZERO = "*NÃO SPAM NO MEU PV* Estou no trabalho ou jogando, me merva"
-USER_BOT_NO_WARN = ("Por favor me marcar no grupo. ***MAS NÃO SPAM AQUI***"
+USER_BOT_WARN_ZERO      =      "* NÃO SPAM NO MEU PV * Estou trabalhando ou jogando, r
+USER_BOT_NO_WARN        = ( "Por favor, marque no grupo. *** MAS NÃO SPAM AQUI ***") 
                     
                 
                     
