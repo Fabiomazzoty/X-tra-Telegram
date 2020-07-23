@@ -37,11 +37,11 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Reply to photo or sticker nigger.`")
+        await img.edit("`Responda a imagem ou sticker desejado`")
         return
 
     if photo:
-        await img.edit("`Processing...`")
+        await img.edit("`Processando...`")
         try:
             image = Image.open(photo)
         except OSError:
@@ -62,10 +62,10 @@ async def okgoogle(img):
         fetchUrl = response.headers['Location']
 
         if response != 400:
-            await img.edit("`Image successfully uploaded to Google. Maybe.`"
-                           "\n`Parsing source now. Maybe.`")
+            await img.edit("`Imagem upload no Google. Maybe.`"
+                           "\n`paciência, procurando...`")
         else:
-            await img.edit("`Google told me to fuck off.`")
+            await img.edit("`Google falou pra cais fora Kkkkkkk.`")
             return
 
         os.remove(name)
@@ -75,9 +75,9 @@ async def okgoogle(img):
         imgspage = match['similar_images']
 
         if guess and imgspage:
-            await img.edit(f"[{guess}]({fetchUrl})\n\n`Looking for this Image...`")
+            await img.edit(f"[{guess}]({fetchUrl})\n\n`Estou procurando.. ...`")
         else:
-            await img.edit("`Can't find this piece of shit.`")
+            await img.edit("`Não consigo achar essa desgraça.`")
             return
 
         if img.pattern_match.group(1):
