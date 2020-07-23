@@ -12,7 +12,7 @@ CACHE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME In Heroku!"
-USER_BOT_WARN_ZERO = "`You Were Spamming My Inbox, Hence You Are Blocked!`"
+USER_BOT_WARN_ZERO = "`Você está spam a minha caixa de mensagens, você pode ser bloqueado! !`"
 USER_BOT_NO_WARN = ("Oi, no momento devo estar ocupado, por gentileza me marcar no grupo para que seja uma resposta mais rápida. )
 
 
@@ -33,7 +33,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Approved [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("Aprovado [{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.delete()
 
@@ -64,7 +64,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("`You Were Blocked,` [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("`Você foi bloqueado ,` [{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
