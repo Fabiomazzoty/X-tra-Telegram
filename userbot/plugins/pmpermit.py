@@ -13,7 +13,7 @@ CACHE = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME In Heroku!"
 USER_BOT_WARN_ZERO = "`Você está spam a minha caixa de mensagens, você pode ser bloqueado! !`"
-USER_BOT_NO_WARN = ("Oi, no momento devo estar ocupado, por gentileza me marcar no grupo para que seja uma resposta mais rápida. )
+USER_BOT_NO_WARN = ("Oi, no momento devo estar ocupado, por gentileza me marcar no grupo para que seja uma resposta mais rápida." )
 
 
 if Var.PRIVATE_GROUP_ID is not None:
